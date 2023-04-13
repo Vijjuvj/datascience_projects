@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Calories Prediction Using Multiple linear Regression</title>
+    </head>
+    <style>
+        body{
+            background-color:#37306B;
+        }
+
+        h1{
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+      color:#CE2E6C;
+      text-shadow: 2px 2px #000;
+      letter-spacing: 0.05em;
+    }
+        #inp{
+            background-color:#270082;
+            width:400;
+            height:50;
+            margin-left: 35%;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-color: aqua;
+           color:antiquewhite;
+        }
+        #inp::placeholder{
+            text-align: center;
+            color:antiquewhite;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+.custom-btn {
+    margin-left: 40%;
+  width: 230px;
+  height: 60px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-9 {
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn-9:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background-color: #1fd1f9;
+background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  transition: all 0.3s ease;
+}
+.btn-9:hover {
+  background: transparent;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  color: #fff;
+}
+.btn-9:hover:after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
+
+ /* 4 */
+.btn-4 {
+    margin-left: 35%;
+    background-color: #4dccc6;
+    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  line-height: 72px;
+  padding: 0;
+  width: 400px;
+  border: none;
+  text-align: center;
+  color:black;
+}
+.btn-4:hover{
+  background-color: #89d8d3;
+background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+}
+
+
+    </style>
+    <body>
+    <div class="container">
+        <h1 style="text-align: center;">Calories Prediction</h1>
+        <form action="/predict"method='POST'>
+        <input id="inp" type="text" name="Gender" placeholder="Gender for male 0 female 1 of Person " required="required"><br>
+        <input id="inp" type="text" name="Age" placeholder="Age of a person " required="required"><br>
+        <input id="inp" type="text" name="Height" placeholder="Height of a person in CM" required="required"><br>
+        <input id="inp" type="text" name="Weight" placeholder="Weight of a person in KGs" required="required"><br>
+        <input id="inp" type="text" name="Duration" placeholder="Duration of a person " required="required"><br>
+        <input  id="inp" type="text" name="Heart_Rate" placeholder="Heart_Rate of a person " required="required"><br>
+        <input  id="inp" type="text" name="Body_Temp" placeholder="Body_Temp of a person in celsius" required="required"><br>
+        <button class="custom-btn btn-9" type="submit" class="btn-btn-outline-warning">Predict</button>
+    </form>
+    <div class="custom-btn btn-4" >
+    <strong>Calories={{value}}</strong>
+    </div>
+    </div>
+</body>
+
+</html>
