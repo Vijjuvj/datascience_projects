@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <title>Credit card Transaction Fraud Analysis </title>
+    </head>
+    <style>
+        body{
+            background-color:#37306B;
+        }
+
+        h1{
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+      color:#CE2E6C;
+      text-shadow: 2px 2px #000;
+      letter-spacing: 0.05em;
+    }
+        #inp{
+            background-color:#270082;
+            width:400;
+            height:50;
+            margin-left: 35%;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-color: aqua;
+           color:antiquewhite;
+        }
+        #inp::placeholder{
+            text-align: center;
+            color:antiquewhite;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+.custom-btn {
+    margin-left: 40%;
+  width: 230px;
+  height: 60px;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-9 {
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn-9:after {
+  position: absolute;
+  content: " ";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background-color: #1fd1f9;
+background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  transition: all 0.3s ease;
+}
+.btn-9:hover {
+  background: transparent;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  color: #fff;
+}
+.btn-9:hover:after {
+  -webkit-transform: scale(2) rotate(180deg);
+  transform: scale(2) rotate(180deg);
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2),
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
+
+ /* 4 */
+.btn-4 {
+    margin-left: 35%;
+    background-color: #4dccc6;
+    background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  line-height: 72px;
+  padding: 0;
+  width: 400px;
+  border: none;
+  text-align: center;
+  color:black;
+}
+.btn-4:hover{
+  background-color: #89d8d3;
+background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
+}
+
+
+    </style>
+    <body>
+    <div class="container">
+        <h1 style="text-align: center;">Credit Card Fraud Analysis</h1>
+    <form action="/predict"method="POST">
+        <input id="inp"type="text" name="Age" placeholder="Age of a person"required="required">
+        <br>
+        <input id="inp" type="text" name="OpenCreditLines" placeholder="No.of OpenCreditLines"required="required">
+        <br>
+        <input id="inp" type="text" name="RealEstateLoans" placeholder="No.of RealEstateLoans"required="required">
+        <br>
+        <input  id="inp" type="text" name="Income" placeholder="Monthly Income"required="required">
+        <br>
+        <input id="inp" type="text" name="Gender" placeholder="Male:1 female:0"required="required">
+        <br>
+        <input id="inp" type="text" name="East" placeholder="East:1 or else 0"required="required">
+        <br>
+        <input id="inp" type="text" name="North" placeholder="North :1 or else 0"required="required">
+        <br>
+        <input id="inp" type="text" name="South" placeholder="South :1 or else 0"required="required">
+        <br>
+        <input id="inp" type="text" name="West" placeholder="West :1 or else 0"required="required">
+        <br>
+        <input id="inp" type="text" name="Rented" placeholder="Rented:0 OwnHouse:1"required="required">
+        <br>
+        <input id="inp" type="text" name="Occupation" placeholder="Occupation: 0 to 4 "required="required">
+        <br>
+        <input id="inp"  type="text" name="Education" placeholder="Education:0 to 4 "required="required">
+        <br>
+        <button class="custom-btn btn-9" type="submit" class="btn-btn-outline-warning">Predict</button>
+    </form>
+        <div class="custom-btn btn-4" >
+    <strong>Transaction is a {{value}} analysis</strong>
+    </div>
+    </div>
+</body>
